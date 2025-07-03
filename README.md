@@ -111,8 +111,8 @@ cd /opt/tomcat/bin
 sudo ./startup.sh
 ```
 ### Jenkins Job Configuration
-```bash
-# Create a new Jenkins job configured to poll SCM every minute with the schedule:
-* * * * *
-# Set up Maven build steps with the goal:
-clean package
+* Create a new Jenkins job configured to poll SCM every minute with the schedule:
+<code>* * * * * </code>
+* Set up Maven build steps with the goal:
+   clean package
+
