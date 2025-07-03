@@ -2,18 +2,20 @@
 
 This project demonstrates a simple CI/CD pipeline using Jenkins, Maven, and Tomcat, deployed on an AWS EC2 instances.
 
-Inspired by Ashfaque’s (https://github.com/Ashfaque-9x) DevOps project, this project includes my personalized modifications to the Jenkins-Maven-Tomcat CI/CD pipeline.
+Inspired by Ashfaque’s (https://github.com/Ashfaque-9x) DevOps project, this repository contains my personalized modifications to the Jenkins-Maven-Tomcat CI/CD pipeline.
+> **Note:** This setup uses the latest stable editions of Jenkins, Maven (3.9.10), and Tomcat (9.0.106) as of the time of implementation to ensure up-to-date features and security.
 
 ---
 
 ## Features
 
-- Jenkins installation and configuration on Amazon Linux 2 EC2 instance
-- Maven setup for build automation
-- Tomcat server for deploying Java web applications
-- Poll SCM trigger for automated builds every minute
-- Secure user setup in Tomcat
-- Customized Jenkins jobs and pipeline scripts
+- Jenkins installation and configuration on Amazon Linux 2 EC2 instance  
+- Maven setup for build automation  
+- Tomcat server for deploying Java web applications  
+- Poll SCM trigger for automated builds every minute  
+- Secure user setup in Tomcat  
+- GitHub webhooks configured for event-driven builds  
+- Customized Jenkins jobs and pipeline scripts  
 
 ---
 
@@ -121,4 +123,8 @@ sudo ./startup.sh
 * Customized Jenkins pipeline scripts for smoother deployment.
 * Verified Java 17 compatibility and environment variables setup.
 * Troubleshot common permission issues on EC2 instance.
+
+### GitHub Webhooks Integration
+* Configured Jenkins to use GitHub webhooks for automatic build triggers whenever code is pushed to the repository.
+* This ensures faster, event-driven CI/CD without relying solely on scheduled polling.
 
