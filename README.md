@@ -2,7 +2,7 @@
 
 This project demonstrates a simple CI/CD pipeline using Jenkins, Maven, and Tomcat, deployed on an AWS EC2 instance.
 
-I followed a YouTube tutorial by [Ashfaque](https://github.com/Ashfaque-9x) and customized the setup with my own configurations and improvements.
+Inspired by Ashfaque’s (https://github.com/Ashfaque-9x) DevOps project, this project includes my personalized modifications to the Jenkins-Maven-Tomcat CI/CD pipeline.
 
 ---
 
@@ -42,3 +42,21 @@ sudo systemctl start jenkins
 java -version
 javac -version
 systemctl status jenkins
+
+### Maven Installation and Configuration
+# Download and install Maven
+cd /opt
+sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
+sudo tar -xzvf apache-maven-3.9.10-bin.tar.gz
+sudo mv apache-maven-3.9.10 maven
+
+# Setup environment variables
+echo 'export M2_HOME=/opt/maven' >> ~/.bash_profile
+echo 'export M2=/opt/maven/bin' >> ~/.bash_profile
+echo 'export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto.x86_64' >> ~/.bash_profile
+echo 'export PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2' >> ~/.bash_profile
+source ~/.bash_profile
+
+# Verify Maven
+mvn -v
+
