@@ -1,6 +1,6 @@
 # Jenkins + Maven + Tomcat CI/CD Pipeline on AWS EC2
 
-This project demonstrates a simple CI/CD pipeline using Jenkins, Maven, and Tomcat, deployed on an AWS EC2 instance.
+This project demonstrates a simple CI/CD pipeline using Jenkins, Maven, and Tomcat, deployed on an AWS EC2 instances.
 
 Inspired by Ashfaque’s (https://github.com/Ashfaque-9x) DevOps project, this project includes my personalized modifications to the Jenkins-Maven-Tomcat CI/CD pipeline.
 
@@ -63,6 +63,11 @@ source ~/.bash_profile
 # Verify Maven
 mvn -v
 ```
+#### Notes:
+* Java Path used: <code> /usr/lib/jvm/java-17-amazon-corretto.x86_64 </code>
+* MAVEN_HOME path: <code> /opt/maven </code>
+##### Make sure to configure these paths under Jenkins → Manage Jenkins → Global Tool Configuration → Maven installations for your Jenkins jobs to build correctly.
+
 ### Tomcat Server Setup
 ```bash
 # Install Java if not installed
