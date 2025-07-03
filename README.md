@@ -114,5 +114,11 @@ sudo ./startup.sh
 * Create a new Jenkins job configured to poll SCM every minute with the schedule:
 <code>* * * * * </code>
 * Set up Maven build steps with the goal:
-   clean package
+  <code> clean package </code>
+* Configure the deployment step to copy the generated WAR file to Tomcat’s  <code>webapps</code> directory.
+
+### My Improvements and Notes
+* Customized Jenkins pipeline scripts for smoother deployment.
+* Verified Java 17 compatibility and environment variables setup.
+* Troubleshot common permission issues on EC2 instance.
 
