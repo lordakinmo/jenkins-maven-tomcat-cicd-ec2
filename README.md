@@ -21,7 +21,6 @@ Inspired by Ashfaque’s (https://github.com/Ashfaque-9x) DevOps project, this p
 
 ### Jenkins Installation
 
-```bash
 # Update packages
 sudo yum update -y
 
