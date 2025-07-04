@@ -2,7 +2,6 @@
 
 This project demonstrates a simple CI/CD pipeline using Jenkins, Maven, and Tomcat, deployed on an AWS EC2 instances.
 
-Inspired by Ashfaque’s (https://github.com/Ashfaque-9x) DevOps project, this repository contains my personalized modifications to the Jenkins-Maven-Tomcat CI/CD pipeline.
 > **Note:** This setup uses the latest stable editions of Jenkins, Maven (3.9.10), and Tomcat (9.0.106) as of the time of implementation to ensure up-to-date features and security.
 
 ---
@@ -100,13 +99,13 @@ sudo ./startup.sh
 sudo nano /opt/tomcat/conf/tomcat-users.xml
 
 # Add user roles and users:
-# <role rolename="manager-gui"/>
-# <role rolename="manager-script"/>
-# <role rolename="manager-jmx"/>
-# <role rolename="manager-status"/>
-# <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
-# <user username="deployer" password="deployer" roles="manager-script"/>
-# <user username="tomcat" password="s3cret" roles="manager-gui"/>
+# <role rolename="admin-gui"/>
+# <role rolename="admin-script"/>
+# <role rolename="admin-jmx"/>
+# <role rolename="admin-status"/>
+# <user username="admin" password="admin" roles="admin-gui, admin-script, admin-jmx, admin-status"/>
+# <user username="deployer" password="deployer" roles="admin-script"/>
+# <user username="tomcat" password="tomcat" roles="admin-gui"/>
 
 # Start Tomcat server
 cd /opt/tomcat/bin
